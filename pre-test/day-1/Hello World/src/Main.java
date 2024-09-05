@@ -23,7 +23,7 @@ public class Main {
         System.out.println("Hello My Name is "+myName);
         System.out.printf("I'm %d years old \n",age);
         System.out.println("My salary is "+salary);
-        System.out.println("I sell tissue for " +price +'$');
+        System.out.println("I sell tissue for: " +price +'$');
         System.out.println("My grade is: " +nilai);
         System.out.println("Am I straight: " +status);
     }
