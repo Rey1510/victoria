@@ -1,0 +1,27 @@
+Task: Create a Simple Library Management System
+
+Class Definitions:
+
+LibraryItem (abstract class):
+        Attributes: String title, String itemId, boolean isCheckedOut.
+        Abstract Methods: void checkOut(), void returnItem(), void printDetails().
+    Book (subclass of LibraryItem):
+        Additional Attributes: String author, int pages.
+        Implement all abstract methods.
+    DVD (subclass of LibraryItem):
+        Additional Attributes: String director, int duration.
+        Implement all abstract methods.
+
+Library Management:
+
+    Create a Library class that maintains a collection of LibraryItem objects.
+    Methods:
+        void addItem(LibraryItem item): Adds a new item to the library.
+        void removeItem(String itemId): Removes an item based on its ID.
+        void listAllItems(): Lists all items in the library.
+        void checkOutItem(String itemId): Checks out an item if it is available.
+        void returnItem(String itemId): Returns an item if it is checked out.
+        LibraryItem searchByTitle(String title): Finds an item by its title.
+Implementation:
+
+Write a main method to demonstrate adding books and DVDs to the library, checking them out, returning them, and listing all items.
