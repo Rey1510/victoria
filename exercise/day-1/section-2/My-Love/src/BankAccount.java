@@ -3,10 +3,10 @@ public class BankAccount {
     private double balance;
     private String accountHolder;
 
-    public BankAccount(String accountNumber, String accountHolder) {
+    public BankAccount(String accountNumber) {
         this.accountNumber = accountNumber;
         this.balance = 0.0;
-        this.accountHolder = accountHolder;
+        this.accountHolder = "";
     }
 
     public void deposit(double amount){
