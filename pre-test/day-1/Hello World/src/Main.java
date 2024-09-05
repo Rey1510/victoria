@@ -43,19 +43,73 @@ public class Main {
 //        double l2 = luas(pi,r);
 //        System.out.println("Luas adalah "+l2);
 
-        int angka;
-        angka = 2;
-        if(angka%2==0){
-            System.out.println("Angka genap!");
+//        int angka;
+//        angka = 2;
+//        if(angka%2==0){
+//            System.out.println("Angka genap!");
+//        }else{
+//            System.out.println("Angka ganjil!");
+//        }
+//
+//        angka = 13;
+//        if(angka%2==0){
+//            System.out.println("Angka genap!");
+//        }else{
+//            System.out.println("Angka ganjil!");
+//        }
+
+//        int myNumber = 5;
+//        String myString = "5";
+//        System.out.println(myNumber == myString);
+
+        int myNumber;
+        String statusOdd;
+        myNumber = 10;
+        if(myNumber%2==0){
+            statusOdd = "Genap";
         }else{
-            System.out.println("Angka ganjil!");
+            statusOdd = "Ganjil";
+        }
+        if(myNumber>50){
+            System.out.println("Angka lebih besar dari 50  dan angka "+statusOdd);
+        }else{
+            System.out.println("Angka lebih kecil dari 50  dan angka "+statusOdd);
         }
 
-        angka = 13;
-        if(angka%2==0){
-            System.out.println("Angka genap!");
+        myNumber = 75;
+        if(myNumber%2==0){
+            statusOdd = "Genap";
         }else{
-            System.out.println("Angka ganjil!");
+            statusOdd = "Ganjil";
+        }
+        if(myNumber>50){
+            System.out.println("Angka lebih besar dari 50  dan angka "+statusOdd);
+        }else{
+            System.out.println("Angka lebih kecil dari 50  dan angka "+statusOdd);
+        }
+
+        myNumber = 76;
+        if(myNumber%2==0){
+            statusOdd = "Genap";
+        }else{
+            statusOdd = "Ganjil";
+        }
+        if(myNumber>50){
+            System.out.println("Angka lebih besar dari 50  dan angka "+statusOdd);
+        }else{
+            System.out.println("Angka lebih kecil dari 50  dan angka "+statusOdd);
+        }
+
+        myNumber = 47;
+        if(myNumber%2==0){
+            statusOdd = "Genap";
+        }else{
+            statusOdd = "Ganjil";
+        }
+        if(myNumber>50){
+            System.out.println("Angka lebih besar dari 50  dan angka "+statusOdd);
+        }else{
+            System.out.println("Angka lebih kecil dari 50  dan angka "+statusOdd);
         }
     }
 }
