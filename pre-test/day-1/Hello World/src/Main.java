@@ -136,12 +136,22 @@ public class Main {
 //            System.out.println(oddEven);
 //        }
 
-        for(int i=1; i<=50 ; i++){
+//        for(int i=1; i<=50 ; i++){
+//            if(i%2==0){
+//                System.out.println(i+" is Even");
+//            }else{
+//                System.out.println(i);
+//            }
+//        }
+
+        int i = 1;
+        while(i<=50){
             if(i%2==0){
-                System.out.println(i+" is Even");
+                System.out.println("Even");
             }else{
                 System.out.println(i);
             }
+            i++;
         }
     }
 }
