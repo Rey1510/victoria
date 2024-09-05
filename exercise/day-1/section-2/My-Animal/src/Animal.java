@@ -1,5 +1,6 @@
 public class Animal {
-    void eat(){
-        System.out.println("This animal eats food.");
+
+    void makeSound(){
+        System.out.println(("Some generic animal sound"));
     }
 }
