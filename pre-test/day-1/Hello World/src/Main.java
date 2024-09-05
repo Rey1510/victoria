@@ -124,16 +124,24 @@ public class Main {
 //            System.out.println(dayName);
 //        }
 
-        String oddEven;
-        Integer[] x = new Integer[]{1,2,3,4,5};
-        for(Integer en : x){
-            switch(en%2){
-                case 0: oddEven = "Even"; break;
-                case 1: oddEven = "Odd"; break;
-                default: oddEven = ""; break;
-            }
+//        String oddEven;
+//        Integer[] x = new Integer[]{1,2,3,4,5};
+////        for(Integen : x){
+//            switch(en%2){
+//                case 0: oddEven = "Even"; break;
+//                case 1: oddEven = "Odd"; break;
+//                default: oddEven = ""; break;
+//            }
+//
+//            System.out.println(oddEven);
+//        }
 
-            System.out.println(oddEven);
+        for(int i=1; i<=50 ; i++){
+            if(i%2==0){
+                System.out.println(i+" is Even");
+            }else{
+                System.out.println(i+ " is Odd");
+            }
         }
     }
 }
