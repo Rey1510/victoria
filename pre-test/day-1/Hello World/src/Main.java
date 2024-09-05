@@ -144,14 +144,22 @@ public class Main {
 //            }
 //        }
 
-        int i = 1;
-        while(i<=50){
-            if(i%2==0){
-                System.out.println("Even");
-            }else{
+//        int i = 1;
+//        while(i<=50){
+//            if(i%2==0){
+//                System.out.println("Even");
+//            }else{
+//                System.out.println(i);
+//            }
+//            i++;
+//        }
+
+        for (int i = 1; i < 50; i++) {
+            if(i%15==0){
+                break;
+            }else {
                 System.out.println(i);
             }
-            i++;
         }
     }
 }
