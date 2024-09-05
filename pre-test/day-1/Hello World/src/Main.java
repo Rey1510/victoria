@@ -169,12 +169,28 @@ public class Main {
 //                System.out.println(i);;
 //        }
 
-        int x = 8;
-        int answer = 1;
-        for (int i = 1; i <= x ; i++) {
-            answer = answer * i;
-        }
-        System.out.println(answer);
+//        int x = 8;
+//        int answer = 1;
+//        for (int i = 1; i <= x ; i++) {
+//            answer = answer * i;
+//        }
+//        System.out.println(answer);
+
+//        int x = 8;
+//        int answer = 1;
+//        for (int i = 1; x >= i ; x--) {
+//            answer = answer * x;
+//        }
+//        System.out.println(answer);
+
+//        int x = 8;
+//        int answer = 1;
+//        for (int i = x; i >= 1 ; i--) {
+//            answer = answer * i;
+//        }
+//        System.out.println(answer);
+
+        
 
     }
 }
