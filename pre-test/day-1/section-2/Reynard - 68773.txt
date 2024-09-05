@@ -1,0 +1,22 @@
+1. a
+2. b
+3. d
+4. b
+5. b
+6. b
+7. d
+8. a
+9. d
+10. a
+
+11. True
+12. True
+13. False
+14. False
+15. True
+
+16. gatau
+17. gatau
+18. pembentuk dari sebuah class, fungsinya untuk gatau
+19. gatau
+20. gatau
