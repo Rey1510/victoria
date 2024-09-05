@@ -112,18 +112,28 @@ public class Main {
 //            System.out.println("Angka lebih kecil dari 50  dan angka "+statusOdd);
 //        }
 
-        String dayName;
-        Integer[] day = new Integer[]{1,2,3,5};
-        for(Integer en : day){
-            switch (en){
-                case 1: dayName = "Sunday"; break;
-                case 2: dayName = "Monday"; break;
-                case 3: dayName = "Tuesday"; break;
-                default: dayName = "Invalid day"; break;
-            }
-            System.out.println(dayName);
-        }
+//        String dayName;
+//        Integer[] day = new Integer[]{1,2,3,5};
+//        for(Integer en : day){
+//            switch (en){
+//                case 1: dayName = "Sunday"; break;
+//                case 2: dayName = "Monday"; break;
+//                case 3: dayName = "Tuesday"; break;
+//                default: dayName = "Invalid day"; break;
+//            }
+//            System.out.println(dayName);
+//        }
 
-        
+        String oddEven;
+        Integer[] x = new Integer[]{1,2,3,4,5};
+        for(Integer en : x){
+            switch(en%2){
+                case 0: oddEven = "Even"; break;
+                case 1: oddEven = "Odd"; break;
+                default: oddEven = ""; break;
+            }
+
+            System.out.println(oddEven);
+        }
     }
 }
