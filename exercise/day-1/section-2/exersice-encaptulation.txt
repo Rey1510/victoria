@@ -1,0 +1,14 @@
+Exercise 1: Encapsulation
+Objective: Understand and apply encapsulation by creating classes with private fields and public methods to access and modify those fields.
+
+Task: Create a BankAccount class with the following requirements:
+
+Fields: accountNumber (String), balance (double), accountHolder (String)
+Constructor: Initialize accountNumber, accountHolder, and set balance to 0.0.
+Methods:
+    1. deposit(double amount): Add the amount to the balance if the amount is positive.
+    2. withdraw(double amount): Subtract the amount from the balance if the amount is positive and less than or equal to the current balance.
+    3. getBalance(): Return the current balance.
+    4. getAccountHolder(): Return the name of the account holder.
+    5. setAccountHolder(String name): Set the name of the account holder.
+Goal: Implement the class in such a way that the balance and account holder's name cannot be directly accessed or modified outside the class.

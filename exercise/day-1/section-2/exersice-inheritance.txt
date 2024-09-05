@@ -1,0 +1,15 @@
+Objective: Understand how inheritance allows one class to inherit the properties and methods of another.
+
+Task:
+
+1. Create a base class Animal with the following attributes and methods:
+    - String name
+    - String species
+    Constructor to initialize these attributes.
+    Method makeSound() that prints a generic sound (e.g., "Some generic animal sound").
+
+2. Create two subclasses, Dog and Cat, that inherit from Animal.
+    - Override the makeSound() method in both subclasses to print "Woof" for Dog and "Meow" for Cat.
+
+3. In your main method, create instances of Dog and Cat, set their names and species, and call their makeSound() methods.
+

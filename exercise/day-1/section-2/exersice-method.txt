@@ -1,0 +1,11 @@
+Exercise 1: Basic Method Creation
+Objective: Understand how to create and use methods in a class.
+
+Task: Create a class Calculator with the following requirements:
+
+Methods:
+- add(int a, int b): Returns the sum of two integers.
+- subtract(int a, int b): Returns the difference between two integers.
+- multiply(int a, int b): Returns the product of two integers.
+- divide(int a, int b): Returns the quotient of two integers. If b is zero, print an error message and return 0.
+Goal: Practice defining and using basic methods within a class, understanding method signatures, and handling simple conditional logic.
