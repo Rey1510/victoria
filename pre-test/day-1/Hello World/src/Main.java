@@ -5,7 +5,7 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+//        System.out.println("Hello world!");
 
         int age;
         age = 20;
@@ -33,14 +33,29 @@ public class Main {
 //        System.out.println("Am I straight: " +status);
 
 
-        final float pi = 3.14f;
-        int r;
-        r = 10;
-        double l1 = luas(pi,r);
-        System.out.println("Luas adalah "+l1);
+//        final float pi = 3.14f;
+//        int r;
+//        r = 10;
+//        double l1 = luas(pi,r);
+//        System.out.println("Luas adalah "+l1);
+//
+//        r=15;
+//        double l2 = luas(pi,r);
+//        System.out.println("Luas adalah "+l2);
 
-        r=15;
-        double l2 = luas(pi,r);
-        System.out.println("Luas adalah "+l2);
+        int angka;
+        angka = 2;
+        if(angka%2==0){
+            System.out.println("Angka genap!");
+        }else{
+            System.out.println("Angka ganjil!");
+        }
+
+        angka = 13;
+        if(angka%2==0){
+            System.out.println("Angka genap!");
+        }else{
+            System.out.println("Angka ganjil!");
+        }
     }
 }
