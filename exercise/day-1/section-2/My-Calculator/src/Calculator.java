@@ -14,7 +14,7 @@ public class Calculator {
         return a*b;
     }
 
-    public double getDivide(int a, int b){
+    public double getDivide(double a, double b){
         if(b==0){
             System.out.println("Pembagi tidak boleh 0");
             return 0;
