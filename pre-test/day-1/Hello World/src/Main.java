@@ -62,54 +62,67 @@ public class Main {
 //        String myString = "5";
 //        System.out.println(myNumber == myString);
 
-        int myNumber;
-        String statusOdd;
-        myNumber = 10;
-        if(myNumber%2==0){
-            statusOdd = "Genap";
-        }else{
-            statusOdd = "Ganjil";
-        }
-        if(myNumber>50){
-            System.out.println("Angka lebih besar dari 50  dan angka "+statusOdd);
-        }else{
-            System.out.println("Angka lebih kecil dari 50  dan angka "+statusOdd);
+//        int myNumber;
+//        String statusOdd;
+//        myNumber = 10;
+//        if(myNumber%2==0){
+//            statusOdd = "Genap";
+//        }else{
+//            statusOdd = "Ganjil";
+//        }
+//        if(myNumber>50){
+//            System.out.println("Angka lebih besar dari 50  dan angka "+statusOdd);
+//        }else{
+//            System.out.println("Angka lebih kecil dari 50  dan angka "+statusOdd);
+//        }
+//
+//        myNumber = 75;
+//        if(myNumber%2==0){
+//            statusOdd = "Genap";
+//        }else{
+//            statusOdd = "Ganjil";
+//        }
+//        if(myNumber>50){
+//            System.out.println("Angka lebih besar dari 50  dan angka "+statusOdd);
+//        }else{
+//            System.out.println("Angka lebih kecil dari 50  dan angka "+statusOdd);
+//        }
+//
+//        myNumber = 76;
+//        if(myNumber%2==0){
+//            statusOdd = "Genap";
+//        }else{
+//            statusOdd = "Ganjil";
+//        }
+//        if(myNumber>50){
+//            System.out.println("Angka lebih besar dari 50  dan angka "+statusOdd);
+//        }else{
+//            System.out.println("Angka lebih kecil dari 50  dan angka "+statusOdd);
+//        }
+//
+//        myNumber = 47;
+//        if(myNumber%2==0){
+//            statusOdd = "Genap";
+//        }else{
+//            statusOdd = "Ganjil";
+//        }
+//        if(myNumber>50){
+//            System.out.println("Angka lebih besar dari 50  dan angka "+statusOdd);
+//        }else{
+//            System.out.println("Angka lebih kecil dari 50  dan angka "+statusOdd);
+//        }
+
+        String dayName;
+        Integer[] day = new Integer[]{1,2,3,5};
+        for(Integer en : day){
+            switch (en){
+                case 1: dayName = "Sunday"; break;
+                case 2: dayName = "Monday"; break;
+                case 3: dayName = "Tuesday"; break;
+                default: dayName = "Invalid day"; break;
+            }
+            System.out.println(dayName);
         }
 
-        myNumber = 75;
-        if(myNumber%2==0){
-            statusOdd = "Genap";
-        }else{
-            statusOdd = "Ganjil";
-        }
-        if(myNumber>50){
-            System.out.println("Angka lebih besar dari 50  dan angka "+statusOdd);
-        }else{
-            System.out.println("Angka lebih kecil dari 50  dan angka "+statusOdd);
-        }
-
-        myNumber = 76;
-        if(myNumber%2==0){
-            statusOdd = "Genap";
-        }else{
-            statusOdd = "Ganjil";
-        }
-        if(myNumber>50){
-            System.out.println("Angka lebih besar dari 50  dan angka "+statusOdd);
-        }else{
-            System.out.println("Angka lebih kecil dari 50  dan angka "+statusOdd);
-        }
-
-        myNumber = 47;
-        if(myNumber%2==0){
-            statusOdd = "Genap";
-        }else{
-            statusOdd = "Ganjil";
-        }
-        if(myNumber>50){
-            System.out.println("Angka lebih besar dari 50  dan angka "+statusOdd);
-        }else{
-            System.out.println("Angka lebih kecil dari 50  dan angka "+statusOdd);
-        }
     }
 }
