@@ -1,6 +1,8 @@
-public class Animal {
+public abstract class Animal {
 
-    void makeSound(){
-        System.out.println(("Some generic animal sound"));
+    abstract void sound();
+
+    void sleep(){
+        System.out.println(("This animal is sleeping"));
     }
 }
