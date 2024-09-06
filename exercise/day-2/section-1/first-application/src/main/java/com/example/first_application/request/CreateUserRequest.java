@@ -9,7 +9,7 @@ import lombok.Setter;
 @Builder
 @Setter
 @Getter
-public class CreateUserResponse{
+public class CreateUserRequest {
     @JsonProperty("id")
     private Long id;
 

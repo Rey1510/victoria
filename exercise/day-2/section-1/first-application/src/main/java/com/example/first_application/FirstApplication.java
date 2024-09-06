@@ -1,16 +1,16 @@
 package com.example.first_application;
 
+import com.example.first_application.request.CreateUserRequest;
+import com.example.first_application.request.CreateUserResponse;
+import com.example.first_application.request.EmployeeUserRequest;
+import com.example.first_application.response.EmployeeUserResponse;
 import com.example.first_application.response.GetAssetResponse;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
-import java.security.PublicKey;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -131,5 +131,36 @@ public class FirstApplication {
 		return all;
 	}
 
+	@PostMapping("/users")
+	public ResponseEntity<List<CreateUserResponse>> createUser(
+			@RequestBody CreateUserRequest request) {
+
+		List<CreateUserResponse> users = new ArrayList<>();
+
+		users.add(CreateUserResponse.builder().id(1l).fullName("ab").build());
+		users.add(CreateUserResponse.builder().id(2l).fullName("cd").build());
+
+		users.add(
+				CreateUserResponse.builder().id(request.getId()).fullName(request.getFullName()).age(request.getAge()).address(request.getAddress()).build()
+		);
+
+		return new ResponseEntity<>(users, HttpStatus.OK);
+	}
+
+	@PostMapping("/employee")
+	public ResponseEntity<ArrayList<EmployeeUserResponse>> createEmployee(
+			@RequestBody EmployeeUserRequest request
+	){
+		ArrayList<EmployeeUserResponse> employee = new ArrayList<>();
+
+		employee.add(EmployeeUserResponse.builder().id(1l).name("tes1").age(12).address(null).phone("081xxx").build());
+		employee.add(EmployeeUserResponse.builder().id(2l).name("tes1").age(12).address("Indonesia").phone("082xxx").build());
+
+		employee.add(
+				EmployeeUserResponse.builder().id(employee.size()+1l).name(request.getName()).age(request.getAge()).address(request.getAddress()).phone(request.getPhone()).build()
+		);
+
+		return new ResponseEntity<>(employee,HttpStatus.OK);
+	}
 
 }
