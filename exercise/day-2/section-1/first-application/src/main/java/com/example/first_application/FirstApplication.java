@@ -45,7 +45,7 @@ public class FirstApplication {
 //		response.setFullName("Testestes");
 
 	@GetMapping("/users/{id}")
-	public GetAssetResponse getAssetbyId(
+	public ArrayList<GetAssetResponse> getAssetbyId(
 			@PathVariable Long id
 	){
 		ArrayList<GetAssetResponse> asset = new ArrayList<>();
@@ -54,20 +54,24 @@ public class FirstApplication {
 		asset.add(GetAssetResponse.builder().id(2l).fullName("Anton2").build());
 		asset.add(GetAssetResponse.builder().id(3l).fullName("Anton3").build());
 		asset.add(GetAssetResponse.builder().id(4l).fullName("Anton4").build());
-		asset.add(GetAssetResponse.builder().id(5l).fullName("Anton5").build());
+		asset.add(GetAssetResponse.builder().id(8l).fullName("Anton5").build());
 
 //		for (int i = 0; i < asset.size(); i++) {
 //			if(asset.get(i).getId().equals(id)){
 //				return asset.get(i);
 //			}
 //		}
-
+		ArrayList<GetAssetResponse> all = new ArrayList<>();
 		for(GetAssetResponse as : asset){
-			if(as.getId().equals(id)){
-				return as;
+//			if(as.getId().equals(id)){
+//				return as;
+//			}
+			if(as.getId() >= id){
+				all.add(as);
 			}
 		}
-		return null;
+		return all;
+
 //		return GetAssetResponse.builder().id(id).fullName("Jontor").build();
 	}
 
