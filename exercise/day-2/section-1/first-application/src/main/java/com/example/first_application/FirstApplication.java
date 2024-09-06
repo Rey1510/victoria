@@ -156,9 +156,12 @@ public class FirstApplication {
 		employee.add(EmployeeUserResponse.builder().id(1l).name("tes1").age(12).address(null).phone("081xxx").build());
 		employee.add(EmployeeUserResponse.builder().id(2l).name("tes2").age(12).address("Indonesia").phone("082xxx").build());
 
-		employee.add(
-				EmployeeUserResponse.builder().id(employee.size()+1l).name(request.getName()).age(request.getAge()).address(request.getAddress()).phone(request.getPhone()).build()
-		);
+		if(request.getName() != null && request.getAge()!=null && request.getPhone() != null){
+			employee.add(
+					EmployeeUserResponse.builder().id(employee.size()+1l).name(request.getName()).age(request.getAge()).address(request.getAddress()).phone(request.getPhone()).build()
+			);
+		}
+
 
 		return new ResponseEntity<>(employee,HttpStatus.OK);
 	}

@@ -11,11 +11,11 @@ import lombok.Setter;
 @Getter
 public class EmployeeUserRequest {
 
-    @JsonProperty("name")
+    @JsonProperty(value = "name", required = true)
     private String name;
 
     @JsonProperty("age")
-    private int age;
+    private Integer age;
 
     @JsonProperty(value = "address", required = false, defaultValue = "nul")
     private String address;

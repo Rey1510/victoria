@@ -13,11 +13,11 @@ public class EmployeeUserResponse {
     @JsonProperty("id")
     private Long id;
 
-    @JsonProperty("name")
+    @JsonProperty(value = "name", required = true)
     private String name;
 
     @JsonProperty("age")
-    private int age;
+    private Integer age;
 
     @JsonProperty(value = "address", required = false, defaultValue = "nul")
     private String address;
