@@ -1,0 +1,10 @@
+
+
+- get user by id
+URI: /users
+Method: GET
+response:
+{
+    "id": 
+    "name" :
+}
