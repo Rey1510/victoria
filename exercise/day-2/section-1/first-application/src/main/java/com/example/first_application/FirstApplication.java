@@ -3,6 +3,7 @@ package com.example.first_application;
 import com.example.first_application.request.CreateUserRequest;
 import com.example.first_application.request.CreateUserResponse;
 import com.example.first_application.request.EmployeeUserRequest;
+import com.example.first_application.request.UpdateUserRequest;
 import com.example.first_application.response.EmployeeUserResponse;
 import com.example.first_application.response.GetAssetResponse;
 import org.springframework.boot.SpringApplication;
@@ -21,6 +22,8 @@ public class FirstApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(FirstApplication.class, args);
 	}
+
+	private ArrayList<CreateUserResponse> users = new ArrayList<>();
 
 	@GetMapping()
 	public String sayHello(){
@@ -135,13 +138,13 @@ public class FirstApplication {
 	public ResponseEntity<List<CreateUserResponse>> createUser(
 			@RequestBody CreateUserRequest request) {
 
-		List<CreateUserResponse> users = new ArrayList<>();
+//		List<CreateUserResponse> users = new ArrayList<>();
 
-		users.add(CreateUserResponse.builder().id(1l).fullName("ab").build());
-		users.add(CreateUserResponse.builder().id(2l).fullName("cd").build());
+//		users.add(CreateUserResponse.builder().id(1l).fullName("ab").build());
+//		users.add(CreateUserResponse.builder().id(2l).fullName("cd").build());
 
 		users.add(
-				CreateUserResponse.builder().id(request.getId()).fullName(request.getFullName()).age(request.getAge()).address(request.getAddress()).build()
+				CreateUserResponse.builder().id((long)users.size()+1l).fullName(request.getFullName()).age(request.getAge()).address(request.getAddress()).build()
 		);
 
 		return new ResponseEntity<>(users, HttpStatus.OK);
@@ -164,6 +167,24 @@ public class FirstApplication {
 
 
 		return new ResponseEntity<>(employee,HttpStatus.OK);
+	}
+
+	@PatchMapping("/users/{id}")
+	public ResponseEntity<ArrayList<CreateUserResponse>> updateUser(
+			@RequestBody UpdateUserRequest request,
+			@PathVariable("id") Long id
+			){
+
+		//check
+		for(CreateUserResponse user : users){
+			if(user.getId()==id){
+				user.setFullName(request.getFullName());
+			}
+		}
+
+		//return response
+		return new  ResponseEntity<>(users, HttpStatus.OK);
+
 	}
 
 }
