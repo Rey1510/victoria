@@ -1,0 +1,54 @@
+1. b
+2. b
+3. b
+4. b
+5. c
+6. b
+7. b
+8. a
+9. a
+10. b
+
+11. False
+12. False
+13. True
+14. False
+15. True
+
+Essay
+
+1. RESTful architecture dibuat untuk menjadi panduan untuk desain dan development sebuah web.
+
+2. GET digunakan untuk meretreive data, POST untuk membuat data baru, PUT untuk mengupdate data jika existing jika tidak akan membuat data baru, DELETE untuk remove data
+
+3. Spring Boot memudahkan karena memiliki beberapa kunci dalam proses simplifikasi yaitu
+a) Auto-Configuration sehingga tidak perlu config XML secara manual
+b) Opinionated Approcah menyediakan default dalam berbagai skenario
+c) Simplified Dependency Management memudahkan untuk menambah library
+d) Faster development cycle yang memudahkan developer untuk membuat prototype dan build web services
+
+4. @RequestMapping digunakan untuk memetakan HTTP request ke handler dalam pengontrol.
+
+5. HTTP status code membantu memberi standard response mengenai proses yang terjadi dalam sistem apakah sukses, fail, atau action needed. Contoh yang sering dijumpai adalah error code 404 "Not Fonud" dimana server tidak dapat melocate resource yang diminta
+
+6. Validasi input dapat dilakukan dengan menggunakan anotasi seperti @Valid atau @Validated di parameter metode dan anotasi seperti @NotNull, @Size, dll. Spring Boot akan otomatis memvalidasi input dan menghasilkan respon error jika input tidak valid.
+
+7. Dependency Injection adalah teknik di mana Spring Boot menginject objek yang dibutuhkan ke dalam kelas melalui konstruktor, setter, atau bidang. IoC memungkinkan Spring Framework untuk mengelola siklus hidup objek dan ketergantungan mereka, sehingga pengembang tidak perlu membuat atau mengelola objek secara manual.
+
+8. @RequestBody: Digunakan untuk memetakan konten dari permintaan HTTP ke objek Java.
+@ResponseBody: Mengubah objek Java menjadi format respon dan mengirimkannya kembali ke klien.
+
+9. Spring Boot menggunakan Jackson sebagai library default untuk serialisasi (mengubah objek Java menjadi JSON) dan deserialisasi (mengubah JSON menjadi objek Java).
+
+10. Exception handling penting untuk memberikan respon yang jelas dan terstruktur ketika terjadi kesalahan. Spring Boot menyediakan mekanisme global melalui anotasi @ControllerAdvice dan @ExceptionHandler untuk menangani exception di seluruh aplikasi.
+
+11. CORS adalah mekanisme keamanan yang mencegah permintaan lintas domain yang tidak diizinkan. Spring Boot memungkinkan konfigurasi CORS melalui anotasi @CrossOrigin atau pengaturan global di dalam WebMvcConfigurer.
+
+12. Spring Security menyediakan otentikasi dan otorisasi untuk REST API. Prosesnya melibatkan konfigurasi filter keamanan, penggunaan token (seperti JWT), dan mengatur kebijakan akses untuk endpoint.
+
+13. Statelessness berarti setiap permintaan dari klien ke server harus mengandung semua informasi yang diperlukan, tanpa ketergantungan pada sesi. Ini penting untuk skalabilitas karena server tidak perlu menyimpan status pengguna, memungkinkan distribusi beban yang lebih efisien.
+
+14. Postman digunakan untuk mengirim permintaan HTTP ke endpoint API dan memeriksa responsnya. Ini memungkinkan pengujian berbagai operasi (GET, POST, PUT, DELETE) dan memvalidasi bahwa API berfungsi dengan benar.
+
+15. Unit tests menguji metode individual atau unit kode secara terisolasi tanpa ketergantungan eksternal. Integration tests menguji seluruh komponen bekerja bersama, termasuk koneksi ke database atau layanan eksternal, untuk memastikan bahwa sistem berfungsi secara keseluruhan.
+
