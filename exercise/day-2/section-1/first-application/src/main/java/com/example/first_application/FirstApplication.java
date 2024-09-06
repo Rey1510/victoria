@@ -90,4 +90,46 @@ public class FirstApplication {
 //		return new ResponseEntity<>(id, HttpStatus.OK);
 //	}
 
+	@GetMapping("/page")
+	public ArrayList<GetAssetResponse> getAssetByPage(
+			@RequestParam(name = "size") int size,
+			@RequestParam(name = "page") int page
+	){
+		ArrayList<GetAssetResponse> asset = new ArrayList<>();
+
+		asset.add(GetAssetResponse.builder().id(1l).fullName("Anton").build());
+		asset.add(GetAssetResponse.builder().id(2l).fullName("Anton2").build());
+		asset.add(GetAssetResponse.builder().id(3l).fullName("Anton3").build());
+		asset.add(GetAssetResponse.builder().id(4l).fullName("Anton4").build());
+		asset.add(GetAssetResponse.builder().id(5l).fullName("Anton5").build());
+		asset.add(GetAssetResponse.builder().id(6l).fullName("Anton").build());
+		asset.add(GetAssetResponse.builder().id(7l).fullName("Anton2").build());
+		asset.add(GetAssetResponse.builder().id(8l).fullName("Anton3").build());
+		asset.add(GetAssetResponse.builder().id(9l).fullName("Anton4").build());
+		asset.add(GetAssetResponse.builder().id(10l).fullName("Anton5").build());
+
+//		for (int i = 0; i < asset.size(); i++) {
+//			if(asset.get(i).getId().equals(id)){
+//				return asset.get(i);
+//			}
+//		}
+
+		int start = size * (page-1);
+
+		ArrayList<GetAssetResponse> all = new ArrayList<>();
+
+		if(asset.size() - 1 < start){
+			return all;
+		}
+
+		for (int i = start; i < start + size; i++) {
+			all.add(asset.get(i));
+			if (asset.size() - 1 < i + 1) {
+				break;
+			}
+		}
+		return all;
+	}
+
+
 }
