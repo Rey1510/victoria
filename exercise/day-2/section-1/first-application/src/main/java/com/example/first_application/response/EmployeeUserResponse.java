@@ -19,7 +19,7 @@ public class EmployeeUserResponse {
     @JsonProperty("age")
     private int age;
 
-    @JsonProperty("address")
+    @JsonProperty(value = "address", required = false, defaultValue = "nul")
     private String address;
 
     @JsonProperty("phone")
