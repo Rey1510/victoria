@@ -19,7 +19,11 @@ public class FirstApplication {
 		SpringApplication.run(FirstApplication.class, args);
 	}
 
-	@GetMapping
+	@GetMapping(){
+		return "Hello World!"
+	}
+
+	@GetMapping("/users/list")
 	public ArrayList<GetAssetResponse> sayHello(){
 
 		ArrayList<GetAssetResponse> list = new ArrayList<>();
