@@ -1,0 +1,80 @@
+-post user
+URI: /assets
+Method: POST
+{
+  "userId": "12345",
+  "asset": {
+    "name": "Reyy",
+    "age": "21",
+    "dob": "15 Oct 2003",
+    "status": "active"
+}
+
+Response :
+{
+  "status": "success",
+  "data": {
+    "assetId": "1",
+    "name": "Reyy",
+    "age": "21",
+    "dob": "15 Oct 2003",
+    "status": "active"
+  },
+  "message": "Asset added successfully."
+}
+
+
+- get user by id
+URI: /assets
+Method: GET
+{
+  "status": "success",
+  "data": {
+    "userId": "12345",
+    "assets": [
+      {
+        "userId": "1",
+        "name": "Reyy",
+        "age": "21",
+        "dob": "15 Oct 2003",
+        "status": "active"
+      }
+    ]
+  },
+  "message": "User assets retrieved successfully."
+}
+
+-update user by id
+URI: /assets
+Method: PUT
+{
+    "userId": "1",
+    "name": "Royy",
+    "age": "19",
+    "dob": "1 Feb 2013",
+    "status": "active"
+}
+
+Response:
+{
+  "status": "success",
+  "data": {
+    "userId": "1",
+    "name": "Royy",
+    "age": "19",
+    "dob": "1 Feb 2013",
+    "status": "active"
+  },
+  "message": "Asset updated successfully."
+}
+
+-delete user
+request:
+{
+    "id": "1"
+}
+response:
+{
+  "status": "success",
+  "message": "Asset deleted successfully."
+}
