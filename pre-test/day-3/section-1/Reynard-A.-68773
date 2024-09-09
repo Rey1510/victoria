@@ -1,0 +1,88 @@
+1. b
+2. b
+3. b
+4. True
+5. c
+6. b
+7. True
+8. c
+9. c
+10. d
+11. b
+12. True
+13. d
+14. b
+15. a
+16. True
+17. c
+18. c
+19. False
+20. a
+21. b
+22. a
+23. c
+24. a
+25. True
+26. b
+27. c
+28. SELECT * FROM books;
+29. b
+30. b
+
+1. 
+SELECT b.title, a.name AS author_name, g.name AS genre
+FROM books b
+JOIN authors a ON b.author_id = a.id
+JOIN genres g ON b.genre_id = g.id
+WHERE g.name IN ('Mystery', 'Thriller');
+
+2.
+SELECT br.name, COUNT(bb.book_id) AS books_borrowed
+FROM borrowers br
+JOIN borrowed_books bb ON br.id = bb.borrower_id
+GROUP BY br.name
+HAVING COUNT(bb.book_id) > 5;
+
+3.
+SELECT b.title, COUNT(bb.id) AS times_borrowed
+FROM books b
+JOIN borrowed_books bb ON b.id = bb.book_id
+GROUP BY b.title
+ORDER BY times_borrowed DESC;
+
+4.
+SELECT br.name, b.title, DATEDIFF(bb.due_date, bb.borrowed_date) AS days_kept
+FROM borrowed_books bb
+JOIN borrowers br ON bb.borrower_id = br.id
+JOIN books b ON bb.book_id = b.id
+ORDER BY days_kept DESC
+LIMIT 1;
+
+5.
+SELECT b.title, a.name AS author_name
+FROM books b
+JOIN authors a ON b.author_id = a.id
+LEFT JOIN borrowed_books bb ON b.id = bb.book_id
+WHERE bb.book_id IS NULL;
+
+6.
+SELECT b.title, a.name AS author_name, g.name AS genre
+FROM books b
+JOIN authors a ON b.author_id = a.id
+JOIN genres g ON b.genre_id = g.id
+WHERE g.name IN ('Mystery', 'Thriller');
+
+7.
+SELECT g.name AS genre, AVG(DATEDIFF(bb.due_date, bb.borrowed_date)) AS avg_days_borrowed
+FROM genres g
+JOIN books b ON g.id = b.genre_id
+JOIN borrowed_books bb ON b.id = bb.book_id
+GROUP BY g.name;
+
+8.
+SELECT br.name, COUNT(bb.book_id) AS books_borrowed
+FROM borrowers br
+JOIN borrowed_books bb ON br.id = bb.borrower_id
+GROUP BY br.name
+ORDER BY books_borrowed DESC
+LIMIT 3;
