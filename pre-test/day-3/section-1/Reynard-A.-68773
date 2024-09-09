@@ -48,14 +48,14 @@ SELECT b.title, COUNT(bb.id) AS times_borrowed
 FROM books b
 JOIN borrowed_books bb ON b.id = bb.book_id
 GROUP BY b.title
-ORDER BY times_borrowed DESC;
+ORDER BY times_borrowed;
 
 4.
 SELECT br.name, b.title, DATEDIFF(bb.due_date, bb.borrowed_date) AS days_kept
 FROM borrowed_books bb
 JOIN borrowers br ON bb.borrower_id = br.id
 JOIN books b ON bb.book_id = b.id
-ORDER BY days_kept DESC
+ORDER BY days_kept
 LIMIT 1;
 
 5.
