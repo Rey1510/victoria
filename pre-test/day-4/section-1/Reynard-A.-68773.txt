@@ -1,0 +1,30 @@
+1. B
+2. A
+3. B
+4. A
+5. B
+6. A
+7. B
+8. B
+9. A
+10. C
+
+11. Token expiration membatasi masa berlaku token, dan refresh token digunakan untuk mendapatkan token baru tanpa login ulang saat token utama expired.
+
+12. Enkripsi password penting untuk melindungi kata sandi pengguna dari pencurian. BCrypt di Spring Security digunakan untuk membuat hash aman dengan penambahan "salt."
+
+13. Untuk OAuth2 login di Spring Boot, tambahkan dependensi OAuth2, konfigurasi klien OAuth di application.yml, dan biarkan Spring Security menangani alur autentikasi.
+
+14. Authorization server di OAuth2 bertugas mengotentikasi pengguna dan mengeluarkan token yang digunakan untuk mengakses sumber daya yang dilindungi.
+
+15. CORS (Cross-Origin Resource Sharing) mengatur izin akses sumber daya dari domain berbeda untuk mencegah permintaan lintas-domain yang tidak sah.
+
+16. CORS di Spring Boot dapat dikonfigurasi melalui WebMvcConfigurer atau di konfigurasi keamanan menggunakan http.cors().
+
+17. Session fixation attack terjadi ketika penyerang menetapkan ID sesi sebelum login. Spring Security melindungi dengan menghasilkan ID sesi baru setelah autentikasi.
+
+18. Stateful menyimpan data sesi di server, sementara stateless tidak menyimpan data sesi, melainkan menggunakan token seperti JWT di setiap permintaan.
+
+19. Kesalahan umum dalam keamanan web meliputi SQL Injection, XSS, dan CSRF. Dapat dihindari dengan validasi input, enkripsi, dan pengamanan sesi.
+
+20. Audit keamanan penting untuk menemukan dan memperbaiki kerentanan. Alat seperti OWASP ZAP dan Burp Suite dapat membantu dalam proses audit ini. Selain itu juga dapat dilakukan VA yang biasa menggunakan Nessus

@@ -1,0 +1,50 @@
+1. b
+2. a
+3. d
+4. a
+5. d
+
+6. False
+7. True
+8. True
+9. False
+10. True
+
+11. Layer controller bertanggung jawab untuk mengatasi request HTTP sehingga memunculkan response yang sesuai
+
+12. Jadi service layer berinteraksi dengan repository layer saat memanggil method di repository untuk data access dan memprosesnya, kemudian akan dilanjutkan ke service yang akan memproses dengan logic.
+
+13. 
+Controller: Menangani request HTTP dan memetakan ke service
+Service: Berisi logic-logic serta data yang sudah diakses dari repository 
+Repository: Interfaces untuk mengakses database untuk melakukan CRUD.
+
+14. Repository layer akan bertanggung jawab dalam apapun yang berhubungan dengan database, seperti akases database dan database interaction. Selain itu juga berisi method untuk CRUD
+
+15. Implicit casting terjadi secara otomatis ketika tipe target lebih besar daripada tipe sumber, seperti mengonversi int ke double.
+Sedangkan explicit casting diperlukan ketika mengonversi tipe yang lebih besar ke tipe yang lebih kecil, seperti double ke int, dan harus dilakukan secara manual.
+
+16. Untuk configure Spring security menggunakan JWT tokens sebelumnya diperlukan struktur yang berisi header, payload, dan signature. 
+Header berisi type dan tipe enkripsi. 
+Payload berisi data autentikasi user serta roles dan permission.
+Signature digunakan untuk memastikan bahwa token tersebut tidak diotak-atik
+
+17. 
+String str = "23.56";
+double value = Double.parseDouble(str);
+
+18. Method assertEquals dalam pengujian unit digunakan untuk memeriksa apakah dua nilai sama. Ini biasanya digunakan untuk memverifikasi bahwa hasil yang diharapkan sesuai dengan hasil aktual dalam unit testing.
+
+19. Untuk membuat custom UserDetailsService, implemen interface UserDetailsService, kemudian override loadUserByUsername, dan isi detail user (username, password, peran) dari sumber data yang Anda miliki.
+
+20. Annotation @Service digunakan untuk mendefinisikan sebuah service di Spring Boot, dan kelas-kelas service biasanya ditempatkan di dalam package service.
+
+21. Tanggung jawab utama dari lapisan Service adalah untuk memuat logic, memproses data, dan mengkoordinasikan interaksi antara lapisan Controller dan Repository.
+
+22. Pengujian unit untuk kelas service di Spring Boot dapat diatur dengan menulis kasus uji untuk setiap metode di service tersebut. Biasanya orang menggunakan framework mocking seperti Mockito untuk memalsukan dependensi dan memverifikasi perilaku dari metode-metode di kelas service.
+
+23. @RequestMapping digunakan untuk memetakan permintaan HTTP ke metode handler di controller. Annotation ini menentukan URL untuk setiap method. Jadi jika di RequestMapping("/api/users), untuk mengakses method tersebut perlu mengakses URL xxx.com/api.users
+
+24. Untuk menguji integrasi antara layer Service dan Repository, dapat menggunakan @SpringBootTest untuk pengujian integrasi. Kemduian dapat dilakukan injeksi service dan repository, kemudian operasi, dan verifikasi hasilnya menggunakan assertions.
+
+25.Untuk menangani exception di lapisan Controller, dapat menggunakan @ExceptionHandler di dalam controller untuk mendefinisikan metode khusus yang menangani berbagai exception, atau gunakan exception global dengan @ControllerAdvice.
